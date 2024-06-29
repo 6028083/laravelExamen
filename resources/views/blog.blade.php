@@ -115,7 +115,7 @@
                                     <div class="post-info"> <span class="text-uppercase">{{ date_formatter(single_latest_post()->created_at) }}</span>
                                         <span class="text-uppercase">{{ readDuration(single_latest_post()->post_title, single_latest_post()->post_content) }} @choice('min|mins', readDuration(single_latest_post()->post_title, single_latest_post()->post_content)) LEESGOED</span>
                                     </div>
-                                    <img loading="lazy" decoding="async" src="/storage/images/post_images/{{single_latest_post()->featured_image}}" alt="Post Thumbnail" class="w-100">
+                                    <img loading="lazy" decoding="async" src="{{ single_latest_post()->featured_image_url }}" alt="Post Thumbnail" class="w-100">
                                 </div>
                             </a>
                             <div class="card-body px-0 pb-1">
@@ -136,7 +136,7 @@
                                     <div class="post-info"> <span class="text-uppercase">{{ date_formatter($item->created_at) }}</span>
                                         <span class="text-uppercase">{{ readDuration(single_latest_post()->post_title, single_latest_post()->post_content) }} @choice('min|mins', readDuration(single_latest_post()->post_title, single_latest_post()->post_content)) LEESGOED</span>
                                     </div>
-                                    <img loading="lazy" decoding="async" src="/storage/images/post_images/{{$item->featured_image}}" alt="Post Thumbnail" class="w-100">
+                                    <img loading="lazy" decoding="async" src="{{ $item->featured_image_url }}" alt="Post Thumbnail" class="w-100">
                                 </div>
                             </a>
                             <div class="card-body px-0 pb-0">

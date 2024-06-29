@@ -3,7 +3,9 @@
         @forelse ($posts as $post)
         <div class="col-md-4 col-lg-3 col-sm-6">
             <div class="card">
-                <img src="storage/images/post_images/{{$post->featured_image}}" alt="Afbeelding van bedrijf" class="card-img-top">
+                @if($post->featured_image_url)
+                <img src="{{ $post->featured_image_url }}" alt="Afbeelding van bedrijf" class="card-img-top">
+                @endif
                 <div class="card-body p-2">
                     <h3 class="m-0 mb-1">{{ $post->post_title }}</h3>
                 </div>

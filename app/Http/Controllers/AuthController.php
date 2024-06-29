@@ -219,4 +219,27 @@ class AuthController extends UserController
             return redirect()->route('posts.all_posts')->with('error', 'Post niet gevonden');
         }
     }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'post_title' => 'required|string|max:255',
+            'post_content' => 'required|string',
+            'featured_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validatie voor afbeelding
+        ]);
+
+        $post = new Post();
+        $post->post_title = $request->post_title;
+        $post->post_slug = Str::slug($request->post_title);
+        $post->post_content = $request->post_content;
+
+        if ($request->hasFile('featured_image')) {
+            // Sla de afbeelding op in de juiste directory
+            $imagePath = $request->file('featured_image')->store('images/post_images', 'public');
+            $post->featured_image = basename($imagePath);
+        }
+
+        $post->save();
+
+        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
+    }
 }
