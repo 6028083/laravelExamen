@@ -106,7 +106,7 @@
         <div class="row mt-5">
             <div class=" col-lg-8 mb-5 mb-lg-0">
                 <article class="card">
-                    <img loading="lazy" decoding="async" src="/storage/images/post_images/{{$post->featured_image}}" alt="Post Thumbnail" class="w-100 p-4">
+                    <img loading="lazy" decoding="async" src="{{ $post->featured_image_url }} " alt="Post Thumbnail" class="w-100 p-4">
                     <ul class="post-meta mb-2 mt-4">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;margin-top:-4px" class="text-dark" viewBox="0 0 16 16">
