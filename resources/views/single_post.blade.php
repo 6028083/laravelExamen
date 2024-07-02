@@ -1,5 +1,5 @@
 @extends('front.layout.pages-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Artikel')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Task')
 @section('content')
 
 
@@ -14,9 +14,7 @@
 
                 <!-- Navigatie -->
                 <nav class="nav nav-masthead justify-content-center float-md-end col-lg-3 ">
-                    <a class="nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}" href="{{ route('welcome') }}">Home</a>
-                    <a class="nav-link {{ request()->routeIs('over-ons') ? 'active' : '' }}" href="{{ route('over-ons') }}">Over ons</a>
-                    <a class="nav-link {{ request()->routeIs('blog') ? 'active' : '' }}" href="{{ route('blog') }}">Blog</a>
+                    <a class="nav-link {{ request()->routeIs('tasks') ? 'active' : '' }}" href="{{ route('tasks') }}">Tasks</a>
                 </nav>
 
 

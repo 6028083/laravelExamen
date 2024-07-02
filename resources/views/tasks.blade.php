@@ -1,5 +1,5 @@
 @extends('front.layout.pages-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Blogs')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Tasks')
 @section('content')
 
 
@@ -13,9 +13,7 @@
 
                 <!-- Navigatie -->
                 <nav class="nav nav-masthead justify-content-center float-md-end col-lg-3 ">
-                    <a class="nav-link {{ request()->routeIs('welcome') ? 'active' : '' }}" href="{{ route('welcome') }}">Home</a>
-                    <a class="nav-link {{ request()->routeIs('over-ons') ? 'active' : '' }}" href="{{ route('over-ons') }}">Over ons</a>
-                    <a class="nav-link {{ request()->routeIs('blog') ? 'active' : '' }}" href="{{ route('blog') }}">Blog</a>
+                    <a class="nav-link {{ request()->routeIs('tasks') ? 'active' : '' }}" href="{{ route('tasks') }}">Tasks</a>
                 </nav>
 
 
@@ -103,7 +101,7 @@
 
         <div class="row no-gutters-lg">
             <div class="col-12 mt-5">
-                <h2 class=" card section-title">Laatste artikels</h2>
+                <h2 class=" card section-title">Laatste Tasks</h2>
             </div>
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="row">
@@ -135,6 +133,7 @@
                                 <div class="card-image">
                                     <div class="post-info"> <span class="text-uppercase">{{ date_formatter($item->created_at) }}</span>
                                         <span class="text-uppercase">{{ readDuration(single_latest_post()->post_title, single_latest_post()->post_content) }} @choice('min|mins', readDuration(single_latest_post()->post_title, single_latest_post()->post_content)) LEESGOED</span>
+
                                     </div>
                                     <img loading="lazy" decoding="async" src="{{ $item->featured_image_url }}" alt="Post Thumbnail" class="w-100">
                                 </div>

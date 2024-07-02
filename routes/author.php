@@ -21,7 +21,6 @@ Route::prefix('auth')->name('auth.')->group(function () {
         Route::post('/change-profile-picture', [AuthController::class, 'changeProfilePicture'])->name('change-profile-picture');
         Route::view('/settings', 'back.pages.settings')->name('settings');
         Route::post('/change-blog-logo', [AuthController::class, 'changeBlogLogo'])->name('change-blog-logo');
-        Route::view('/over-ons', 'back.pages.over-ons')->name('over-ons');
     });
 });
 // Verander dit in je routes/web.php bestand

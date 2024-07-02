@@ -1,5 +1,5 @@
 @extends('back.layouts.pages-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Nieuwe blogs toevoegen')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Nieuwe task toevoegen')
 @section('content')
 
 <div class="page-header d-print-none">
@@ -33,6 +33,11 @@
                     </div>
                 </div>
                 <div class="col-md-3">
+                    <div class="mb-3">
+                        <label class="form-label">Deadline</label>
+                        <input type="date" class="form-control" name="post_deadline">
+                        <span class="text-danger error-text post_deadline_error"></span>
+                    </div>
                     <div class="mb-3">
                         <div class="form-label">Uitgelichte afbeelding</div>
                         <input type="file" class="form-control" name="featured_image">

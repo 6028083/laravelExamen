@@ -1,12 +1,12 @@
 @extends('back.layouts.pages-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Alle blogs')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Alle tasks')
 @section('content')
 <div class="page-header d-print-none">
     <div class="container-xl">
         <div class="row g-2 align-items-center">
             <div class="col">
                 <h2 class="page-title">
-                    Alle blogs
+                    Alle Taks
                 </h2>
             </div>
         </div>

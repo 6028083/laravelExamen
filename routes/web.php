@@ -6,11 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('tasks');
+})->name('tasks');
 
-Route::view('over-ons', "over-ons")->name('over-ons');
-Route::view('blog', "blog")->name('blog');
 
 
 Route::get('/article/{any}', [TaskController::class, 'readPost'])->name('read_post');
