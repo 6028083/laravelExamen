@@ -8,6 +8,8 @@
                 @endif
                 <div class="card-body p-2">
                     <h3 class="m-0 mb-1">{{ $post->post_title }}</h3>
+                    <br>
+                    <p class="m-0"><b>Deadline</b>: {{ $post->post_deadline }}</p>
                 </div>
                 <div class="d-flex">
                     <a href="{{ route('posts.edit-post', ['post_id' => $post->id]) }}" class="card-btn">Bijwerken</a>

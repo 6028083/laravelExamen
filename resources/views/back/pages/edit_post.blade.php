@@ -33,6 +33,11 @@
                 </div>
                 <div class="col-md-3">
                     <div class="mb-3">
+                        <div class="mb-3">
+                            <label class="form-label">Deadline</label>
+                            <input type="date" class="form-control" name="post_deadline">
+                            <span class="text-danger error-text post_deadline_error"></span>
+                        </div>
                         <div class="form-label">Uitgelichte afbeelding</div>
                         <input type="file" class="form-control" name="featured_image">
                         <span class="text-danger error-text featured_image_error"></span>
