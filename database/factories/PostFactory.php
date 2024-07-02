@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
  */
-class TaskFactory extends Factory
+class PostFactory extends Factory
 {
     protected $model = Post::class;
 
