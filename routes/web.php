@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,7 +13,7 @@ Route::view('over-ons', "over-ons")->name('over-ons');
 Route::view('blog', "blog")->name('blog');
 
 
-Route::get('/article/{any}', [BlogController::class, 'readPost'])->name('read_post');
+Route::get('/article/{any}', [TaskController::class, 'readPost'])->name('read_post');
 
 
 // ... (Uitgecommentarieerde code)

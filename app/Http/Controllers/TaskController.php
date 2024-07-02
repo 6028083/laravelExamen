@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Str;
 
-class BlogController extends UserController
+class TaskController extends UserController
 {
     public function readPost($slug)
     {
